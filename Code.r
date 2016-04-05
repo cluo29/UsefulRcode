@@ -90,3 +90,6 @@ result1=subset( result, select = -c(1,2,3,4 ) )
 
 #copy character
 mood_1[i,7]=as.character(General2[nrow(General2),3])
+
+#use numeric for big numbers
+mood_1[i,16]=as.numeric(General2[nrow(General2),12])
