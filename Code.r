@@ -76,4 +76,12 @@ allresults <- dbGetQuery(mydb,"select * from notifications where cast(user_id as
 #rename a column
 names(activity_3)[11] <- "proximity"
   
+#count unique
+apps=plugin_acpunlock3_all_1[plugin_acpunlock3_all_1$timestamp>last_session_time&plugin_acpunlock3_all_1$timestamp<last_locking_time,]
+    
+applications_foreground_1_unique = as.data.frame(table(apps$applications_foreground))
+    
+applications_foreground_1_unique = applications_foreground_1_unique[applications_foreground_1_unique$Freq !=0,]
+    
+activity_1lplnss[i,20]=nrow(applications_foreground_1_unique)
   
