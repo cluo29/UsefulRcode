@@ -73,6 +73,7 @@ mydb <- dbConnect(dbDriver, host="aware.com", dbname="Visur_999", user="Viuri_99
 allresults <- dbGetQuery(mydb,"select * from notifications where cast(user_id as signed) > 0 order by timestamp asc") #or desc
 
 
-
+#rename a column
+names(activity_3)[11] <- "proximity"
   
   
