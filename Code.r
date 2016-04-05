@@ -85,3 +85,8 @@ applications_foreground_1_unique = applications_foreground_1_unique[applications
     
 activity_1lplnss[i,20]=nrow(applications_foreground_1_unique)
   
+#remove columns
+result1=subset( result, select = -c(1,2,3,4 ) )
+
+#copy character
+mood_1[i,7]=as.character(General2[nrow(General2),3])
