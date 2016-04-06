@@ -94,3 +94,10 @@ mood_1[i,7]=as.character(General2[nrow(General2),3])
 #use numeric for big numbers
 mood_1[i,16]=as.numeric(General2[nrow(General2),12])
 sum(as.numeric(...))
+
+#count column and row
+a=1:5
+b=data.frame(a,a)
+c=ncol(b)+1
+b[1,c]=3
+nrow(b)
