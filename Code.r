@@ -76,6 +76,9 @@ allresults <- dbGetQuery(mydb,"select * from notifications where cast(user_id as
 #rename a column
 names(activity_3)[11] <- "proximity"
   
+#display columns 
+colnames(locations)
+
 #count unique
 apps=plugin_acpunlock3_all_1[plugin_acpunlock3_all_1$timestamp>last_session_time&plugin_acpunlock3_all_1$timestamp<last_locking_time,]
     
