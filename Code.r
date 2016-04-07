@@ -85,6 +85,9 @@ applications_foreground_1_unique = applications_foreground_1_unique[applications
     
 activity_1lplnss[i,20]=nrow(applications_foreground_1_unique)
   
+#see if one var is in all possible vals  
+session_contains_app=nrow(applications_foreground_1_unique[applications_foreground_1_unique$Var1==app_all[j,1],])
+
 #remove columns
 result1=subset( result, select = -c(1,2,3,4 ) )
 
