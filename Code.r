@@ -107,3 +107,7 @@ b=data.frame(a,a)
 c=ncol(b)+1
 b[1,c]=3
 nrow(b)
+
+
+#csv better format
+#write.table(resultClus, "u12.csv", row.names=F, col.names=T, sep=",")
